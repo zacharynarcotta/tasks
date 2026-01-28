@@ -12,6 +12,9 @@ function App(): React.JSX.Element {
                 automatically reload.
                 Modified by Zachary Narcotta
             </p>
+            <p>
+                Hello World!
+            </p>
         </div>
     );
 }
