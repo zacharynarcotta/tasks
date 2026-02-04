@@ -33,7 +33,7 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    return numbers.map((num: string): number => (+num ? +num : 0)); // unary operator (+) attempts to convert the variable into a number
 }
 
 /**
