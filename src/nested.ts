@@ -137,11 +137,37 @@ export function renameQuestionById(
  *
  * Hint: you need to use the ... operator for both the question and the options array
  */
+function modifiedQuestionOptions(
+    options: string[],
+    targetOptionIndex: number,
+    newOption: string,
+): string[] {
+    if (targetOptionIndex === -1) {
+        return [...options, newOption];
+    }
+
+    let optionsCopy = [...options];
+    optionsCopy.splice(targetOptionIndex, 1, newOption);
+    return optionsCopy;
+}
+
 export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
     newOption: string,
 ): Question[] {
-    return [];
+    return questions.map(
+        (question: Question): Question =>
+            question.id === targetId ?
+                {
+                    ...question,
+                    options: modifiedQuestionOptions(
+                        question.options,
+                        targetOptionIndex,
+                        newOption,
+                    ),
+                }
+            :   question,
+    );
 }
