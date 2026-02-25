@@ -1,5 +1,9 @@
 import React from "react";
 import "./App.css";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { TwoDice } from "./components/TwoDice";
+import { Counter } from "./components/Counter";
 import ts_logo from "./assets/Typescript_logo_2020.svg.png";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
@@ -10,10 +14,14 @@ function App(): React.JSX.Element {
             <header className="App-header">
                 UM COS420 with React Hooks and TypeScript
             </header>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Modified by Zachary Narcotta
-            </p>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr /> Modified by Zachary Narcotta
+            <ChangeType></ChangeType>
             <p>Hello World!</p>
             <Container>
                 <Row>
@@ -40,7 +48,6 @@ function App(): React.JSX.Element {
                     ></div>
                 </Row>
             </Container>
-
             <Button
                 onClick={() => {
                     console.log("Hello World!");
