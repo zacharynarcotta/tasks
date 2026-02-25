@@ -32,7 +32,7 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
  */
 export function findQuestion(
     questions: Question[],
-    id: number,,
+    id: number,
 ): Question | null {
     const find = questions.find((question: Question): Question | null =>
         question.id === id ? question : null,
@@ -100,7 +100,7 @@ export function addNewQuestion(
     questions: Question[],
     id: number,
     name: string,
-    type: QuestionType,,
+    type: QuestionType,
 ): Question[] {
     return [...questions, makeBlankQuestion(id, name, type)];
 }
@@ -115,7 +115,7 @@ export function addNewQuestion(
 export function renameQuestionById(
     questions: Question[],
     targetId: number,
-    newName: string,,
+    newName: string,
 ): Question[] {
     return questions.map(
         (question: Question): Question =>
