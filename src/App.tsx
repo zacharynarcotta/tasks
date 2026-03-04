@@ -16,7 +16,7 @@ function App(): React.JSX.Element {
             </header>
             <hr /> Modified by Zachary Narcotta
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
